@@ -2,12 +2,12 @@
 
 const express = require('express');
 const router = express.Router();
-const Student = require('../models/Student'); // Student Model
+const Student = require('../models/Student'); 
 
 // CREATE Student
 router.post('/students', async (req, res, next) => {
     try {
-        const data = await Student.create(req.body);  // No change needed here, just make sure the body includes dob
+        const data = await Student.create(req.body);  
         console.log(data);
         res.json(data);
     } catch (error) {
